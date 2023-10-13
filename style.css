@@ -9,6 +9,7 @@
 
 /* Styling body */
 body {
+    overflow-x: hidden;
     font-family: 'Mooli', sans-serif;
     font-family: 'Nunito', sans-serif;
     font-family: 'Work Sans', sans-serif;
@@ -36,13 +37,20 @@ nav a{
     height: 50px;
     background-color: #18a7c1;
     border-radius: 15px;
+    color: white;
+}
+
+nav a:hover{
+    animation: bubble 1s ease-out;
+    background-color:#d890fe;
 }
 
 nav{
     position: relative;
     left: 350px;
     width: 80%;
-
+    position: relative;
+    transition: transform 0.3s;
 }
 
 .flexx{
@@ -107,16 +115,26 @@ nav {
     width: 70%;
 }
 
-nav>a {
-    color: white;
-    font-weight: 500;
+.flex a {
     text-decoration: none;
 }
 
-nav>a:hover {
-    color: rgb(235, 123, 134) ;
+.flex h3:hover {
     font-weight: bold;
+    color:#d890fe;
 }
+  
+  @keyframes bubble {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
 /* Styling Header section */
 header {
@@ -172,7 +190,7 @@ h2 {
 }
 
 .my-projects-card h3{
-    color: rgb(230, 98, 226);
+    color:#18a7c1;
 }
 
 .button {
@@ -181,7 +199,31 @@ h2 {
     border-radius: 4px;
     background-color: #18a7c1 ;
     margin-top: 32px;
+    position: relative;
+    transition: transform 0.3s;
 }
+
+.button:hover{
+    animation: bubble 1s ease-out;
+    background-color:#d890fe;
+}
+
+
+.button:hover {
+    animation: bubble 0.4s ease-out;
+  }
+  
+  @keyframes bubble {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
 
 .button p {
     color: white;
@@ -275,6 +317,24 @@ h5 {
 }
 
 
+.my-projects-card h3:hover {
+    animation: bubble 1s ease-out;
+    color: #d890fe;
+  }
+  
+  @keyframes bubble {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+
 
 hr {
     height: 4px;
@@ -283,7 +343,10 @@ hr {
 }
 
 
-
+/* .my-projects-card h3{
+    position: relative;
+    transition: transform 0.3s;
+} */
 
 .my-hustle-text-container>h1 {
     color: #18a7c1 ;
@@ -394,7 +457,7 @@ hr {
     transition: all 0.3s ease;
   }
   .footer-col ul li a:hover{
-    color: #ffffff;
+    color: #18a7c1;
     padding-left: 8px;
   }
 
@@ -418,6 +481,8 @@ hr {
     color: #24262b;
     background-color: #ffffff;
   }
+
+
   
  @media(max-width: 767px){
     .footer-col{
